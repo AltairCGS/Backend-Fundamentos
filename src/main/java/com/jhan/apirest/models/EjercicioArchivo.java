@@ -19,7 +19,7 @@ public class EjercicioArchivo {
   @Column(columnDefinition = "LONGTEXT")
   private String descripcion;
   private String lenguaje;
-  private double Nota;
+  private String dificultad;
   @Lob
   @Column(columnDefinition = "LONGTEXT")
   private String solucion;
