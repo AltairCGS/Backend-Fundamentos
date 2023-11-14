@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class EjercicioArchivoService {
@@ -26,5 +27,8 @@ public class EjercicioArchivoService {
     }catch (Exception err){
       return false;
     }
+  }
+  public Optional<EjercicioArchivo> obtenerPorId(Integer id) {
+    return ejercicioArchivoRepository.findById(id);
   }
 }

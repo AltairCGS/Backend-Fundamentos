@@ -21,4 +21,9 @@ public class EstudianteController {
   public ArrayList<Estudiante> obtenerEstudiantes() {
     return estudianteService.obtenerEstudiantes();
   }
+
+  @GetMapping("/query")
+  public ArrayList<Estudiante> obtenerUsuarioPorEmail(@RequestParam("email") String email) {
+    return this.estudianteService.obtenerPorEmail(email);
+  }
 }

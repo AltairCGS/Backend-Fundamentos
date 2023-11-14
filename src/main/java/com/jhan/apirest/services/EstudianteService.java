@@ -19,4 +19,7 @@ public class EstudianteService {
   public ArrayList<Estudiante> obtenerEstudiantes() {
     return (ArrayList<Estudiante>) estudianteRepository.findAll();
   }
+  public ArrayList<Estudiante> obtenerPorEmail(String email) {
+    return estudianteRepository.findByemail(email);
+  }
 }

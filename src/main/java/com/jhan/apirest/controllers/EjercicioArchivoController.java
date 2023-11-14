@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -26,5 +27,10 @@ public class EjercicioArchivoController {
   @DeleteMapping( path = "/{id}")
   public Boolean eliminarEjercicio(@PathVariable("id") Integer id) {
     return ejercicioArchivoService.eliminarEjercicio(id);
+  }
+
+  @GetMapping( path = "/{id}")
+  public Optional<EjercicioArchivo> obtenerUsuarioPorId(@PathVariable("id") Integer id) {
+    return this.ejercicioArchivoService.obtenerPorId(id);
   }
 }
